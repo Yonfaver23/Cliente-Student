@@ -7,9 +7,15 @@
   height: 38px;
   z-index: 1;
 }
+b {
+  color: white;
+}
 
 .text-admin {
   margin-top: 1px;
+}
+span {
+  color: white;
 }
 
 .div-estudiante {
@@ -116,6 +122,7 @@ li ul li ul {
   height: 650px;
   background-color: #5cb2db;
 }
+
 .acordion-editado-tres {
   background-color: #ea1e63 !important;
   color: white;
