@@ -6,6 +6,7 @@
   --font1: bold 1rem/20px var(--fontBase);
   --font2: bold 1.5rem/20px var(--fontBase);
   --fontButton: 1.5rem/20px var(--fontBase);
+  --fontRute: 1rem/20px var(--fontBase);
 }
 * {
   font-family: "Outfit", sans-serif;
