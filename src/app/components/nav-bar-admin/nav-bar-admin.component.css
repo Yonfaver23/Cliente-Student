@@ -1,10 +1,4 @@
 @import url("../../../styles.css");
-/* .nav-bar {
-  width: 15vw;
-  border: 1px solid red;
-  height: 85vh;
-  background-color: var(--primary-color);
-} */
 .acordion-editado {
   background-color: #ea1e63 !important;
   color: white;

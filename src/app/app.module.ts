@@ -13,6 +13,7 @@ import { NavBarAdminComponent } from "./components/nav-bar-admin/nav-bar-admin.c
 import { HeaderAdminComponent } from "../app/components/header-admin/header-admin.component";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { CdkAccordionModule } from "@angular/cdk/accordion";
+import { MatSliderModule } from "@angular/material/slider";
 import { MatIconModule } from "@angular/material/icon";
 
 @NgModule({
@@ -33,6 +34,7 @@ import { MatIconModule } from "@angular/material/icon";
     BrowserAnimationsModule,
     CdkAccordionModule,
     MatIconModule,
+    MatSliderModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
