@@ -1,0 +1,29 @@
+@import url("../../../styles.css");
+
+.header {
+  background: var(--primary-color);
+  font: var(--font1);
+  height: 80px;
+  display: flex;
+  justify-content: right;
+}
+.band {
+  border: 1px solid red;
+}
+.menu-admin > span {
+  background-color: rgb(0, 131, 232);
+  padding: 5px;
+  border-radius: 5px;
+}
+.menu-admin {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  padding: 1rem;
+  border: 1px solid red;
+}
+.icon {
+  border: 2px solid red;
+  width: 50px;
+  height: 50px;
+}

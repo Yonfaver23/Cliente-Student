@@ -1,0 +1,7 @@
+@import url("../../../styles.css");
+.nav-bar {
+  width: 15vw;
+  border: 1px solid red;
+  height: 85vh;
+  background-color: var(--primary-color);
+}
