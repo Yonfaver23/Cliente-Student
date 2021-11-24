@@ -15,6 +15,7 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { CdkAccordionModule } from "@angular/cdk/accordion";
 import { MatSliderModule } from "@angular/material/slider";
 import { MatIconModule } from "@angular/material/icon";
+import { GenerarReporteComponent } from "./components/pages/generar-reporte/generar-reporte.component";
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { MatIconModule } from "@angular/material/icon";
     PanelAdminComponent,
     NavBarAdminComponent,
     HeaderAdminComponent,
+    GenerarReporteComponent,
   ],
   imports: [
     BrowserModule,
