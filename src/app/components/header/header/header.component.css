@@ -5,9 +5,8 @@
   font-size: 30px;
   color: white;
   display: flex;
-  justify-content: center;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
 }
 .container-header {
   display: flex;
@@ -35,6 +34,8 @@
   /* background-color: brown; */
   gap: 10px;
   margin-left: 90px;
+  justify-content: center;
+  align-items: center;
 }
 .date span {
   border-left: 3px solid rgb(107, 179, 255);

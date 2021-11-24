@@ -18,6 +18,16 @@
   align-items: center;
   border-bottom: 3px solid rgb(169, 169, 169);
 }
+.material-icons {
+  padding: 0;
+  margin: 0;
+}
+.header-main p {
+  display: flex;
+  /* border: 1px solid gray; */
+  justify-content: center;
+  align-items: center;
+}
 .header-main h3 {
   padding: 1rem;
   font: var(--font2);
