@@ -5,7 +5,7 @@ import { AdminForumComponent } from "./components/pages/admin-forum/admin-forum.
 import { StudentForumComponent } from "./components/pages/student-forum/student-forum.component";
 import { PanelAdminComponent } from "./components/pages/panel-admin/panel-admin.component";
 import { GenerarReporteComponent } from "./components/pages/generar-reporte/generar-reporte.component";
-
+import { AdminHomeComponent } from "./components/pages/admin-home/admin-home.component";
 const routes: Routes = [
   {
     path: "",
@@ -31,6 +31,11 @@ const routes: Routes = [
     path: "admin/panel/generar-reportes",
     pathMatch: "full",
     component: GenerarReporteComponent,
+  },
+  {
+    path: "admin/panel/home",
+    pathMatch: "full",
+    component: AdminHomeComponent,
   },
 ];
 

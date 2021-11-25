@@ -16,6 +16,7 @@ import { CdkAccordionModule } from "@angular/cdk/accordion";
 import { MatSliderModule } from "@angular/material/slider";
 import { MatIconModule } from "@angular/material/icon";
 import { GenerarReporteComponent } from "./components/pages/generar-reporte/generar-reporte.component";
+import { AdminHomeComponent } from './components/pages/admin-home/admin-home.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { GenerarReporteComponent } from "./components/pages/generar-reporte/gene
     NavBarAdminComponent,
     HeaderAdminComponent,
     GenerarReporteComponent,
+    AdminHomeComponent,
   ],
   imports: [
     BrowserModule,
