@@ -17,6 +17,7 @@ import { MatSliderModule } from "@angular/material/slider";
 import { MatIconModule } from "@angular/material/icon";
 import { GenerarReporteComponent } from "./components/pages/generar-reporte/generar-reporte.component";
 import { AdminHomeComponent } from './components/pages/admin-home/admin-home.component';
+import { StudentValidateComponent } from './components/pages/student-validate/student-validate.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { AdminHomeComponent } from './components/pages/admin-home/admin-home.com
     HeaderAdminComponent,
     GenerarReporteComponent,
     AdminHomeComponent,
+    StudentValidateComponent,
   ],
   imports: [
     BrowserModule,

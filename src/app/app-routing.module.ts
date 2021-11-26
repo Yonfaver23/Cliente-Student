@@ -6,6 +6,7 @@ import { StudentForumComponent } from "./components/pages/student-forum/student-
 import { PanelAdminComponent } from "./components/pages/panel-admin/panel-admin.component";
 import { GenerarReporteComponent } from "./components/pages/generar-reporte/generar-reporte.component";
 import { AdminHomeComponent } from "./components/pages/admin-home/admin-home.component";
+import { StudentValidateComponent } from "./components/pages/student-validate/student-validate.component";
 const routes: Routes = [
   {
     path: "",
@@ -36,6 +37,11 @@ const routes: Routes = [
     path: "admin/panel/home",
     pathMatch: "full",
     component: AdminHomeComponent,
+  },
+  {
+    path: "admin/panel/validar-estudiante",
+    pathMatch: "full",
+    component: StudentValidateComponent,
   },
 ];
 

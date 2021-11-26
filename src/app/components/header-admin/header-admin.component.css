@@ -42,3 +42,8 @@ div span {
   height: 50px;
   color: white;
 }
+@media (max-width: 900px) {
+  header{
+        width: 628px !important;
+    }
+  }
