@@ -1,7 +1,7 @@
 @import url("../../../styles.css");
 
 .header {
-  background: var(--primary-color);
+  background: #5cb2db;
   font: var(--font1);
   height: 80px;
   display: flex;
