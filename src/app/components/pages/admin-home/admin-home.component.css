@@ -5,9 +5,9 @@
 }
 .flex {
   display: flex;
+  width: 100%;
 }
 .form-main {
-  width: 100%;
   height: 60px;
   border-bottom: 3px solid rgb(169, 169, 169);
 }
@@ -23,11 +23,20 @@ h3 {
   display: flex;
   align-items: center;
 }
+.panel {
+  border: 1px solid blue;
+  min-width: 100%;
+}
 h3 p {
   font: var(--fontRute);
 }
 .formulario {
-  padding: 1rem;
+  /* border: 1px solid blue; */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 2rem;
+  justify-content: space-between;
 }
 .input-forum {
   display: flex;
@@ -49,35 +58,7 @@ input[type="date"]:focus::before,
 input[type="date"]:valid::before {
   content: "" !important;
 }
-.option {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 2rem;
 
-  align-items: center;
-}
-textarea {
-  height: 100%;
-}
-.huella {
-  display: flex;
-
-  align-items: flex-end;
-  gap: 1rem;
-}
-
-.btn {
-  border: 1px solid red;
-  font: var(--fontButton);
-  color: white;
-}
-.btn:hover {
-  opacity: 0.8;
-}
-.btn.limpiar {
-  border: 2px solid rgb(135, 135, 255);
-  background-color: rgb(62, 100, 255);
-}
 .btn.guardar {
   border: 2px solid rgb(46, 214, 46);
   background-color: rgb(0, 143, 0);
@@ -91,48 +72,16 @@ select {
   border-radius: 5px;
   border: 1px solid black;
 }
-.table {
-  margin-top: 3rem;
-
+.input {
+  /* border: 1px solid violet; */
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem;
+}
+.colum {
   display: flex;
   flex-direction: column;
-}
-.table-student th {
-  background-color: blue;
-  color: white;
-}
-tbody tr:nth-child(even) {
-  background-color: rgb(130, 190, 255);
-}
-.opciones {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.img-icon img {
-  width: 4rem;
-}
-.img-icon img:hover {
-  opacity: 0.8;
-  cursor: pointer;
-}
-
-.btn.registrar {
-  display: flex;
-  border: 2px solid rgb(46, 214, 46);
-  background-color: rgb(0, 143, 0);
-  text-align: center;
-  gap: 5px;
-}
-td{
-    height: 60px;
-    width: 210px;
-}
-input{
-    position: relative;
-    float: right;
-}
-select{
-    position: relative;
-    float: right;
+  /* background-color: blue; */
+  gap: 1rem;
 }

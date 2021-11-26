@@ -5,6 +5,7 @@
   font: var(--font1);
   height: 80px;
   display: flex;
+  width: 100%;
   justify-content: right;
 }
 .menu-admin > span {
