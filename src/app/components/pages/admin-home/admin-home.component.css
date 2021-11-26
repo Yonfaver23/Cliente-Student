@@ -121,7 +121,7 @@ select {
       grid-gap: 1rem;
       gap: 1rem;
       margin-left: 63px;
-
+      right: -90px;
     }
     .colum3{
       display: flex;
@@ -131,6 +131,7 @@ select {
       gap: 1rem;
       position: absolute;
       top: 773px;
+      right: -90px;
     }
     .colum2{
     display: flex;
@@ -139,5 +140,6 @@ select {
     gap: 1rem;
     position: absolute;
     top: 484px;
+    right: -90px;
     }
 }
