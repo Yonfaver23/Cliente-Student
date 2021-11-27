@@ -18,6 +18,8 @@ import { MatIconModule } from "@angular/material/icon";
 import { GenerarReporteComponent } from "./components/pages/generar-reporte/generar-reporte.component";
 import { AdminHomeComponent } from './components/pages/admin-home/admin-home.component';
 import { StudentValidateComponent } from './components/pages/student-validate/student-validate.component';
+import { StudentBenefitComponent } from "./components/pages/student-benefit/student-benefit.component";
+
 
 @NgModule({
   declarations: [
@@ -32,6 +34,7 @@ import { StudentValidateComponent } from './components/pages/student-validate/st
     GenerarReporteComponent,
     AdminHomeComponent,
     StudentValidateComponent,
+    StudentBenefitComponent,
   ],
   imports: [
     BrowserModule,

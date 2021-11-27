@@ -6,7 +6,7 @@ import { StudentForumComponent } from "./components/pages/student-forum/student-
 import { PanelAdminComponent } from "./components/pages/panel-admin/panel-admin.component";
 import { GenerarReporteComponent } from "./components/pages/generar-reporte/generar-reporte.component";
 import { AdminHomeComponent } from "./components/pages/admin-home/admin-home.component";
-import { StudentValidateComponent } from "./components/pages/student-validate/student-validate.component";
+import { StudentBenefitComponent } from "./components/pages/student-benefit/student-benefit.component";
 const routes: Routes = [
   {
     path: "",
@@ -39,9 +39,9 @@ const routes: Routes = [
     component: AdminHomeComponent,
   },
   {
-    path: "admin/panel/validar-estudiante",
+    path: "admin/panel/estudiante-beneficiario",
     pathMatch: "full",
-    component: StudentValidateComponent,
+    component: StudentBenefitComponent,
   },
 ];
 
