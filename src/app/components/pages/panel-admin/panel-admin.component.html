@@ -16,187 +16,196 @@
             </p>
           </h3>
         </div>
-        <form novalidate [formGroup]="Estudiante" (ngSubmit)="onSubmit()">
-          <div class="formulario">
-            <div class="input-forum">
-              <select formControlName="tipoDocumento" id="tipoDocumento">
-                <option value="" disabled selected>Tipo de documento</option>
-                <option value="0">Cedula Ciudadania</option>
-                <option value="1">Tarjeta de identidad</option>
-              </select>
-              <input
-                placeholder="Numero de documento"
-                formControlName="numeroDocumento"
-                type="number"
-              />
-              <input
-                placeholder="Nombre completo"
-                formControlName="nombreCompleto"
-              />
-              <input
-                placeholder="Apellido completo"
-                formControlName="apellidoCompleto"
-              />
-              <select formControlName="grado">
-                <option value="Grado" value="" disabled selected>Grado</option>
-                <option value="0">Primero</option>
-                <option value="1">Segundo</option>
-                <option value="2">Tercero</option>
-                <option value="3">Cuarto</option>
-              </select>
-              <input placeholder="Director" formControlName="director" />
-              <input placeholder="Barrio" formControlName="barrio" />
-              <input
-                type="date"
-                placeholder="Fecha nacimiento"
-                required
-                formControlName="fechaNacimiento"
-              />
-              <input
-                placeholder="Nombre acudiente"
-                formControlName="nombreAcudiente"
-              />
-              <input placeholder="Parentesco" formControlName="parentesco" />
-              <input
-                placeholder="Telefono/Celular"
-                formControlName="telefono"
-                type="number"
-              />
-              <!-- <h1>{{ estudiante.barrio }}</h1> -->
-              <!-- <input
-                type="date"
-                placeholder="Fecha de registro"
-                required
-                [(ngModel)]="estudiante.fechaRegistro"
-              /> -->
+        <!-- <form novalidate [formGroup]="Estudiante" (ngSubmit)="onSubmit()"> -->
+        <div class="formulario">
+          <div class="input-forum">
+            <select name="tipoDocumento" [(ngModel)]="estudiante.tipoDocumento">
+              <option disabled selected value="">
+                Seleccione tipo documento
+              </option>
+              <option
+                *ngFor="let tipoDocumentos of tipoDocumentos"
+                [value]="tipoDocumentos.idTipoDocumento"
+              >
+                {{ tipoDocumentos.nombre }}
+              </option>
+            </select>
+            <input
+              placeholder="Numero de documento"
+              [(ngModel)]="estudiante.unaPersona.numeroDocumento"
+              type="number"
+            />
+            <input
+              placeholder="Nombre completo"
+              [(ngModel)]="estudiante.nombreCompleto"
+            />
+            <input
+              placeholder="Apellido completo"
+              [(ngModel)]="estudiante.apellido"
+            />
+            <select [(ngModel)]="estudiante.grado">
+              <option value="Grado" value="" disabled selected>Grado</option>
+              <option value="Primero">Primero</option>
+              <option value="Segundo">Segundo</option>
+              <option value="Tercero">Tercero</option>
+              <option value="Cuarto">Cuarto</option>
+            </select>
+            <input placeholder="Director" [(ngModel)]="estudiante.director" />
+            <input placeholder="Barrio" [(ngModel)]="estudiante.barrio" />
+            <input
+              type="date"
+              placeholder="Fecha nacimiento"
+              required
+              [(ngModel)]="estudiante.fechaNacimiento"
+            />
+            <input
+              placeholder="Nombre acudiente"
+              [(ngModel)]="estudiante.nombreAcudiente"
+            />
+            <input
+              placeholder="Parentesco"
+              [(ngModel)]="estudiante.parentesco"
+            />
+            <input
+              placeholder="Telefono/Celular"
+              [(ngModel)]="estudiante.telefono"
+              type="number"
+            />
+            <!-- <h1>{{ estudiante.barrio }}</h1> -->
+            <input
+              type="date"
+              placeholder="Fecha de registro"
+              required
+              [(ngModel)]="estudiante.unaPersona.nombre"
+            />
+          </div>
+          <div class="option">
+            <div class="huella">
+              <textarea rows="6" cols="30"></textarea>
+              <button class="btn registrar">
+                Registrar ingreso
+                <span class="material-icons" style="color: white">
+                  done_outline
+                </span>
+              </button>
             </div>
-            <div class="option">
-              <div class="huella">
-                <textarea rows="6" cols="30"></textarea>
-                <button class="btn registrar">
-                  Registrar ingreso
-                  <span class="material-icons" style="color: white">
-                    done_outline
-                  </span>
-                </button>
-              </div>
-              <div>
-                <button class="btn limpiar">Limpiar</button
-                ><button
-                  class="btn guardar"
-                  id="btnGuardar"
-                  type="submit"
-                  [disabled]="Estudiante.invalid"
-                >
-                  Guardar
-                </button>
-              </div>
-            </div>
-            <div class="table">
-              <div class="opciones">
-                <h3>Listado</h3>
-                <div class="img-icon">
-                  <img src="../../../../assets/icon/pdf.png" />
-                  <img src="../../../../assets/icon/excel.png" />
-                  <img src="../../../../assets/icon/text.png" />
-                </div>
-              </div>
-              <table class="table-student">
-                <tr>
-                  <th>Nombre</th>
-                  <th>Documento</th>
-                  <th>Grado</th>
-                  <th>Direccion</th>
-                  <th>Acudiente</th>
-                  <th>Parentesco</th>
-                  <th>Celular</th>
-                </tr>
-                <tbody>
-                  <tr>
-                    <td>Sunny</td>
-
-                    <td>Mostly sunny</td>
-
-                    <td>Partly cloudy</td>
-                    <td>Sunny</td>
-                    <td>Sunny</td>
-
-                    <td>Mostly sunny</td>
-
-                    <td>Partly cloudy</td>
-                  </tr>
-
-                  <tr>
-                    <td>19°C</td>
-
-                    <td>17°C</td>
-
-                    <td>12°C</td>
-                    <td>Sunny</td>
-                    <td>Sunny</td>
-
-                    <td>Mostly sunny</td>
-
-                    <td>Partly cloudy</td>
-                  </tr>
-
-                  <tr>
-                    <td>E 13 km/h</td>
-
-                    <td>E 11 km/h</td>
-
-                    <td>S 16 km/h</td>
-                    <td>Sunny</td>
-                    <td>Sunny</td>
-
-                    <td>Mostly sunny</td>
-
-                    <td>Partly cloudy</td>
-                  </tr>
-                  <tr>
-                    <td>E 13 km/h</td>
-
-                    <td>E 11 km/h</td>
-
-                    <td>S 16 km/h</td>
-                    <td>Sunny</td>
-                    <td>Sunny</td>
-
-                    <td>Mostly sunny</td>
-
-                    <td>Partly cloudy</td>
-                  </tr>
-                  <tr>
-                    <td>E 13 km/h</td>
-
-                    <td>E 11 km/h</td>
-
-                    <td>S 16 km/h</td>
-                    <td>Sunny</td>
-                    <td>Sunny</td>
-
-                    <td>Mostly sunny</td>
-
-                    <td>Partly cloudy</td>
-                  </tr>
-                  <tr>
-                    <td>E 13 km/h</td>
-
-                    <td>E 11 km/h</td>
-
-                    <td>S 16 km/h</td>
-                    <td>Sunny</td>
-                    <td>Sunny</td>
-
-                    <td>Mostly sunny</td>
-
-                    <td>Partly cloudy</td>
-                  </tr>
-                </tbody>
-              </table>
+            <div>
+              <button class="btn limpiar">Limpiar</button
+              ><button
+                class="btn guardar"
+                id="btnGuardar"
+                type="submit"
+                (click)="save(estudiante)"
+              >
+                Guardar
+              </button>
             </div>
           </div>
-        </form>
+          <div class="table">
+            <div class="opciones">
+              <h3>Listado</h3>
+              <div class="img-icon">
+                <img src="../../../../assets/icon/pdf.png" />
+                <img src="../../../../assets/icon/excel.png" />
+                <img src="../../../../assets/icon/text.png" />
+              </div>
+            </div>
+            <table class="table-student">
+              <tr>
+                <th>Nombre</th>
+                <th>Documento</th>
+                <th>Grado</th>
+                <th>Direccion</th>
+                <th>Acudiente</th>
+                <th>Parentesco</th>
+                <th>Celular</th>
+              </tr>
+              <tbody>
+                <tr>
+                  <td>Sunny</td>
+
+                  <td>Mostly sunny</td>
+
+                  <td>Partly cloudy</td>
+                  <td>Sunny</td>
+                  <td>Sunny</td>
+
+                  <td>Mostly sunny</td>
+
+                  <td>Partly cloudy</td>
+                </tr>
+
+                <tr>
+                  <td>19°C</td>
+
+                  <td>17°C</td>
+
+                  <td>12°C</td>
+                  <td>Sunny</td>
+                  <td>Sunny</td>
+
+                  <td>Mostly sunny</td>
+
+                  <td>Partly cloudy</td>
+                </tr>
+
+                <tr>
+                  <td>E 13 km/h</td>
+
+                  <td>E 11 km/h</td>
+
+                  <td>S 16 km/h</td>
+                  <td>Sunny</td>
+                  <td>Sunny</td>
+
+                  <td>Mostly sunny</td>
+
+                  <td>Partly cloudy</td>
+                </tr>
+                <tr>
+                  <td>E 13 km/h</td>
+
+                  <td>E 11 km/h</td>
+
+                  <td>S 16 km/h</td>
+                  <td>Sunny</td>
+                  <td>Sunny</td>
+
+                  <td>Mostly sunny</td>
+
+                  <td>Partly cloudy</td>
+                </tr>
+                <tr>
+                  <td>E 13 km/h</td>
+
+                  <td>E 11 km/h</td>
+
+                  <td>S 16 km/h</td>
+                  <td>Sunny</td>
+                  <td>Sunny</td>
+
+                  <td>Mostly sunny</td>
+
+                  <td>Partly cloudy</td>
+                </tr>
+                <tr>
+                  <td>E 13 km/h</td>
+
+                  <td>E 11 km/h</td>
+
+                  <td>S 16 km/h</td>
+                  <td>Sunny</td>
+                  <td>Sunny</td>
+
+                  <td>Mostly sunny</td>
+
+                  <td>Partly cloudy</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <!-- </form> -->
       </div>
     </div>
   </div>
