@@ -19,6 +19,7 @@ import { GenerarReporteComponent } from "./components/pages/generar-reporte/gene
 import { AdminHomeComponent } from "./components/pages/admin-home/admin-home.component";
 import { StudentValidateComponent } from "./components/pages/student-validate/student-validate.component";
 import { StudentBenefitComponent } from "./components/pages/student-benefit/student-benefit.component";
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -44,6 +45,7 @@ import { StudentBenefitComponent } from "./components/pages/student-benefit/stud
     MatIconModule,
     MatSliderModule,
     ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -1,12 +1,7 @@
 import { Component, OnInit } from "@angular/core";
-import {
-  FormControl,
-  FormGroup,
-  MinLengthValidator,
-  Validators,
-} from "@angular/forms";
-import { min } from "rxjs";
-// import { Estudiante } from "../../models/estudiante";
+import { EstudianteService } from "src/app/services/estudiante/estudiante.service";
+import { TipoDocumentoService } from "../../../services/tipoDocumento/tipoDocumento.service";
+import { Estudiante, Persona, TipoDocumento } from "../../models/estudiante";
 
 @Component({
   selector: "app-panel-admin",
@@ -14,41 +9,77 @@ import { min } from "rxjs";
   styleUrls: ["./panel-admin.component.css"],
 })
 export class PanelAdminComponent implements OnInit {
-  Estudiante: FormGroup;
-  constructor() {
-    this.Estudiante = new FormGroup({
-      tipoDocumento: new FormControl("", [Validators.required]),
-      numeroDocumento: new FormControl("", [Validators.required]),
-      nombreCompleto: new FormControl(""),
-      apellidoCompleto: new FormControl(""),
-      grado: new FormControl(""),
-      fechaNacimiento: new FormControl(""),
-      fechaRegistro: new FormControl(""),
-      nombreAcudiente: new FormControl(""),
-      parentesco: new FormControl(""),
-      telefono: new FormControl(""),
-      director: new FormControl(""),
-      barrio: new FormControl(""),
-    });
-  }
+  tipoDocumentos: any = [];
+
+  // estudiante: Estudiante = {
+  //   idEstudiante: "",
+  //   grado: "",
+  //   director: "",
+  //   nombreAcudiente: "",
+  //   unaPersona: {
+  //     unTipoDocumento: {
+  //       idTipoDocumento : 1,
+  //     },
+  //     numeroDocumento: "",
+  //     nombre: "",
+  //     apellido: "",
+  //     fechaNacimiento: "",
+  //     telefono: "",
+  //     direccion: "",
+  //     barrio: "",
+  //     fechaCreacion: "",
+  //     fechaModificacion: "",
+  //     estado?: string;
+
+  //   }
+
+  // };
+
+  // tipoDocumento: "",
+  // numeroDocumento: undefined,
+  // nombreCompleto: "",
+  // apellidoCompleto: "",
+  // grado: "",
+  // fechaNacimiento: "",
+  // fechaRegistro: "",
+  // nombreAcudiente: "",
+  // parentesco: "",
+  // telefono: "",
+  // director: "",
+  // barrio: "",
+
+  constructor(
+    private tipoDocumentoService: TipoDocumentoService,
+    private estudianteService: EstudianteService
+  ) {}
 
   ngAfterViewInit() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.getTipoDocumento();
+  }
+  estudiante: Estudiante = new Estudiante();
 
-  onSubmit() {
-    console.log(this.Estudiante.value);
-    console.log("hola mundo");
-    var f = new Date();
-    var _fecha = f.getDate() + "/" + (f.getMonth() + 1) + "/" + f.getFullYear();
-    this.Estudiante.value.fechaRegistro = _fecha;
-    // if (
-    //   this.estudiante.tipoDocumento == "" ||
-    //   this.estudiante.numeroDocumento == "" ||
-    //   this.estudiante.nombreCompleto == "" ||
-    //   this.estudiante.apellidoCompleto == ""
-    // ) {
-    //   console.log("llenar datos");
-    // }
+  save(estudiante: Estudiante) {
+    // console.log(this.estudiante);
+    this.estudianteService.saveEstudiantes(estudiante).subscribe(
+      (res) => {
+        console.log(res);
+      },
+      (err) => {
+        console.log(err);
+      }
+    );
+  }
+
+  getTipoDocumento() {
+    this.tipoDocumentoService.getTipoDocumento().subscribe(
+      (res: any) => {
+        console.log(res);
+
+        this.tipoDocumentos = res;
+      },
+      (err: any) => console.log(err)
+    );
   }
 }
